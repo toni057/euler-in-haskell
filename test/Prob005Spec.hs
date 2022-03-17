@@ -2,7 +2,9 @@ module Prob005Spec where
 
 
 import Test.Hspec ( describe, it, Spec, shouldBe )
-import Prob005 (primeFactors, comb, sol005)
+import Prob005
+import Control.Applicative (Alternative)
+import Data.HashMap.Lazy (empty, fromList)
 
 spec :: Spec
 spec = do
@@ -31,6 +33,15 @@ spec = do
     
     it "can combine two empty lists" $ do
       shouldBe (comb [] []) []
+
+    it "can groupby" $ do
+      shouldBe (groupByToMap [1,1,2,3,3,1,2]) $ fromList [(1,3), (2,2), (3,2)]
+
+    it "can convert an int to hashmap" $ do 
+      shouldBe (f 5) (fromList [(1,1),(2,1),(3,1),(2,2),(5,1)])
+
+    it "can lift map to powers" $ do
+      shouldBe (mult (fromList [(2,2), (3,3)])) [4,27]
 
     it "can calculate the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder" $ do
       shouldBe (sol005 10) 2520
