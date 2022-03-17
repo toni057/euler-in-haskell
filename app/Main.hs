@@ -6,6 +6,9 @@ import Prob002
 import Prob003
 import Prob004
 import Prob005
+import Prob006
+import Prob007
+
 
 main :: IO ()
 main = print (show [
@@ -13,5 +16,7 @@ main = print (show [
   sol002 4000000,
   sol003 600851475143,
   sol004 999,
-  sol005 20
+  sol005 20,
+  sol006 100,
+  sol007 10001
   ])

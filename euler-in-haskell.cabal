@@ -31,6 +31,8 @@ library
       Prob003
       Prob004
       Prob005
+      Prob006
+      Prob007
   other-modules:
       Paths_euler_in_haskell
   hs-source-dirs:
@@ -64,6 +66,8 @@ test-suite euler-in-haskell-test
       Prob003Spec
       Prob004Spec
       Prob005Spec
+      Prob006Spec
+      Prob007Spec
       TestSpec
       Paths_euler_in_haskell
   hs-source-dirs:

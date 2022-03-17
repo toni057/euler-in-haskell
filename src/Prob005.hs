@@ -2,7 +2,6 @@ module Prob005 where
 
 import Data.HashMap.Internal.Strict (HashMap, empty, fromList, toList)
 
--- import Data.HashMap.Lazy
 import Data.List (group, sort)
 import Control.Arrow ((&&&))
 import qualified Control.Applicative as Hashmap
@@ -12,7 +11,6 @@ import GHC.Real (reduce)
 
 sol005 :: Integer -> Integer
 sol005 n = product (mult (f n))
--- foldl (unionWith comb) empty (map (groupByToMap . primeFactors) [1..n])
 
 
 mult :: HashMap Integer Integer -> [Integer]
